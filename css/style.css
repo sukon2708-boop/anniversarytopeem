@@ -777,12 +777,11 @@ p{
     align-items: stretch;
   }
 
-  .btn{
-    width: 100%;
-    max-width: 420px;
-    margin-inline: auto;
-    padding: 12px 18px;
-  }
+.modal .btn{
+  width: 100%;
+  max-width: 420px;
+}
+
 
   /* เมนูไม่แน่น */
   .menu-grid{
@@ -955,10 +954,14 @@ p{
 
 /* ✅ มือถือ: กันรูปของขวัญสูงเกินจอ + ไม่ล้นการ์ด */
 @media (max-width: 720px){
-  .media-card{
-    width: 100%;
-    max-width: 520px;
-    padding: 14px 14px 8px;
+  .modal .row{
+    flex-direction: column; /* modal ยังบน–ล่าง */
+  }
+
+  .music-controls{
+    flex-direction: row;    /* 🎯 เพลงซ้าย–ขวา */
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .gift-stage{ min-height: 200px; }
@@ -985,10 +988,11 @@ p{
 
 .btn-row{
   display: flex;
-  justify-content: center; /* หรือ space-between */
-  gap: 16px;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;  /* ถ้าไม่พอ ค่อยขึ้นบรรทัด */
 }
+
 
 /* ขนาดปุ่มใหม่ */
 .btn-row .btn{
