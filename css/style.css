@@ -210,6 +210,40 @@ p{
   text-decoration: none;
 }
 
+/* ===============================
+   FIX BUTTON SIZE ON MOBILE
+   =============================== */
+@media (max-width: 480px) {
+
+  .btn-row {
+    flex-direction: column;       /* เรียงปุ่มลง */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn,
+  .btn.secondary {
+    width: 100%;                  /* ไม่เกินการ์ด */
+    max-width: 260px;             /* กันใหญ่เกิน */
+    font-size: 14px;              /* ลดตัวหนังสือ */
+    padding: 10px 14px;           /* ลดความสูง */
+    border-radius: 18px;
+  }
+}
+@media (max-width: 360px) {
+  .btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+.btn-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 
 .btn:hover{
   background: linear-gradient(135deg,#c1121f,#9b0d18);
@@ -1132,7 +1166,7 @@ p{
 
 
 .imgxxx{
-  max-width: 40%;
+  max-width: 70%;
   height: auto;
   display: block;
   margin: 18px auto;
