@@ -214,12 +214,14 @@ p{
    FIX BUTTON SIZE ON MOBILE
    =============================== */
 @media (max-width: 480px) {
-
   .btn-row {
-    flex-direction: column;       /* เรียงปุ่มลง */
-    gap: 10px;
-    width: 100%;
+    flex-direction: row;      /* ✅ ซ้าย–ขวา */
+    justify-content: center;
+    flex-wrap: wrap;          /* กันล้น */
   }
+}
+
+
 
   .btn,
   .btn.secondary {
@@ -229,7 +231,7 @@ p{
     padding: 10px 14px;           /* ลดความสูง */
     border-radius: 18px;
   }
-}
+
 @media (max-width: 360px) {
   .btn {
     font-size: 13px;
@@ -695,6 +697,14 @@ p{
   justify-content:center;
 }
 
+@media (max-width: 720px){
+  .music-controls{
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 
 .music-controls{
   display:flex;
@@ -979,10 +989,6 @@ p{
   gap: 16px;
   margin-top: 20px;
 }
-
-
-
-
 
 /* ขนาดปุ่มใหม่ */
 .btn-row .btn{
