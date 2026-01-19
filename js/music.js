@@ -34,7 +34,7 @@ playBtn.addEventListener("click", () => {
   if(music.paused){
     music.play();
     vinyl.classList.add("spin");
-    playBtn.textContent = "⏸ หยุดเพลง";
+    playBtn.textContent = "〢 หยุดเพลง";
   }else{
     music.pause();
     vinyl.classList.remove("spin");
