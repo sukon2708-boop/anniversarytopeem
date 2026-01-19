@@ -32,7 +32,7 @@ function updateStatusText(){
   }else if(remain > 0){
     statusText.innerHTML = `เหลือคูปอง ${remain} ใบ`;
   }else{
-    statusText.innerHTML = `คุณใช้คูปองครบแล้ว 💝`;
+    statusText.innerHTML = `คุณใช้คูปองครบแล้ว `;
   }
 }
 
@@ -75,7 +75,7 @@ document.querySelectorAll(".coupon-img").forEach(img => {
       popupText.innerText = "คูปองนี้ถูกใช้ไปแล้ว";
       useBtn.style.display = "none";
     }else{
-      popupText.innerText = "คูปองพิเศษสำหรับคนพิเศษ 💝";
+      popupText.innerText = "คูปองพิเศษสำหรับคนพิเศษ ";
       useBtn.style.display = "inline-block";
     }
 
