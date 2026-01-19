@@ -975,10 +975,14 @@ p{
 
 .btn-row{
   display: flex;
-  justify-content: center;   /* จัดกลาง */
-  gap: 10px;
-  margin-top: 14px;
+  justify-content: center; /* หรือ space-between */
+  gap: 16px;
+  margin-top: 20px;
 }
+
+
+
+
 
 /* ขนาดปุ่มใหม่ */
 .btn-row .btn{
@@ -1166,7 +1170,7 @@ p{
 
 
 .imgxxx{
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 18px auto;
