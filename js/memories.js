@@ -1,34 +1,21 @@
-const gallery = document.getElementById("gallery");
-const modalBackdrop = document.getElementById("modalBackdrop");
-const bigImg = document.getElementById("bigImg");
+const video = document.getElementById("video");
+const playBtn = document.getElementById("playBtn");
 
-const photos = [
-  "assets/memoriesm1.jpg",
-  "assets/memoriesm2.jpg",
-  "assets/memoriesm3.jpg",
-  "assets/memoriesm4.jpg",
-  "assets/memoriesm5.jpg",
-  "assets/memoriesm6.jpg",
-  "assets/memoriesm7.jpg",
-  "assets/memoriesm8.jpg",
-  "assets/memoriesm9.jpg",
-];
+let isPlaying = false;
 
-photos.forEach(src=>{
-  const img = document.createElement("img");
-  img.className = "photo";
-  img.src = src;
-  img.alt = "memory";
-  img.addEventListener("click", ()=>{
-    bigImg.src = src;
-    modalBackdrop.style.display = "flex";
-  });
-  gallery.appendChild(img);
+playBtn.addEventListener("click", () => {
+  if(!isPlaying){
+    video.play();
+    playBtn.textContent = "〢 หยุดวิดีโอ";
+    isPlaying = true;
+  }else{
+    video.pause();
+    playBtn.textContent = "▶ เล่นวิดีโอ";
+    isPlaying = false;
+  }
 });
 
-document.getElementById("closeModalBtn").addEventListener("click", ()=>{
-  modalBackdrop.style.display = "none";
-});
-modalBackdrop.addEventListener("click", (e)=>{
-  if(e.target === modalBackdrop) modalBackdrop.style.display = "none";
+video.addEventListener("ended", () => {
+  playBtn.textContent = "▶ เล่นวิดีโอ";
+  isPlaying = false;
 });
