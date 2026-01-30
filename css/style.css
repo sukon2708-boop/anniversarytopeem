@@ -1356,55 +1356,60 @@ h1 + .subtle{
   }
 }
 
+/* ===============================
+   VIDEO WRAPPER (ขนาดพอดีจอ)
+   =============================== */
 
-/* ===== VIDEO (FIX NOT OVERFLOW) ===== */
-/* ===== VIDEO (ขนาดเดิม ไม่ล้น) ===== */
 .video-wrapper{
   position: relative;
   width: 100%;
-  max-width: 520px;   /* ขยายจากเดิมเล็กน้อย */
-  margin: 18px auto 26px;
 
-  /* หัวใจของคำว่า "ขนาดเดิม" */
+  /* ปรับให้เล็กลงและ responsive */
+  max-width: clamp(260px, 85vw, 420px);
+
+  margin: 16px auto 24px;
   height: auto;
 
   overflow: hidden;
-  border-radius: 22px;
-  box-shadow: 0 20px 40px rgba(255,120,170,.35);
+  border-radius: 20px;
+  box-shadow: 0 16px 32px rgba(255,120,170,.30);
 }
 
 /* วิดีโอแสดงตามสัดส่วนจริง */
 .video-wrapper video{
   width: 100%;
-  height: auto;        /* ★ ขนาดตามไฟล์จริง */
+  height: auto;
   display: block;
 }
-.video-wrapper{
-  max-width:520px;
-  margin:20px auto;
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 18px 36px rgba(255,120,170,.35);
-}
-
-.video-wrapper video{
-  width:100%;
-  display:block;
-}
 
 
-/* ===== เฉพาะกรณีวิดีโอยาวมากเกินจอ ===== */
-@media (max-height: 700px){
-  .video-wrapper video{
-    max-height: 45vh;  /* กันชนหัวข้อในจอเตี้ย ๆ */
+/* ===============================
+   มือถือจอเล็กมาก
+   =============================== */
+@media (max-width: 400px){
+  .video-wrapper{
+    max-width: 90vw;
+    border-radius: 18px;
   }
 }
 
 
-/* ===== MODAL VIDEO ===== */
+/* ===============================
+   หน้าจอเตี้ย (กันวิดีโอสูงเกิน)
+   =============================== */
+@media (max-height: 700px){
+  .video-wrapper video{
+    max-height: 45vh;
+  }
+}
+
+
+/* ===============================
+   MODAL VIDEO
+   =============================== */
 .modal video{
   width: 100%;
-  max-height: 80vh;
+  max-height: 65vh;   /* ลดจากเดิม 80vh */
   object-fit: contain;
-  border-radius: 18px;
+  border-radius: 16px;
 }
