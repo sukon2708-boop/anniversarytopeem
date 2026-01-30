@@ -1357,25 +1357,25 @@ h1 + .subtle{
 }
 
 /* ===============================
-   VIDEO WRAPPER (ขนาดพอดีจอ)
+   VIDEO WRAPPER (จิ๋วสุด)
    =============================== */
 
 .video-wrapper{
   position: relative;
   width: 100%;
 
-  /* ปรับให้เล็กลงและ responsive */
-  max-width: clamp(260px, 85vw, 420px);
+  /* จิ๋วมาก */
+  max-width: clamp(180px, 60vw, 260px);
 
-  margin: 16px auto 24px;
+  margin: 12px auto 18px;
   height: auto;
 
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 16px 32px rgba(255,120,170,.30);
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(255,120,170,.25);
 }
 
-/* วิดีโอแสดงตามสัดส่วนจริง */
+/* วิดีโอรักษาสัดส่วนจริง */
 .video-wrapper video{
   width: 100%;
   height: auto;
@@ -1386,30 +1386,30 @@ h1 + .subtle{
 /* ===============================
    มือถือจอเล็กมาก
    =============================== */
-@media (max-width: 400px){
+@media (max-width: 360px){
   .video-wrapper{
-    max-width: 90vw;
-    border-radius: 18px;
+    max-width: 80vw;
+    border-radius: 14px;
   }
 }
 
 
 /* ===============================
-   หน้าจอเตี้ย (กันวิดีโอสูงเกิน)
+   หน้าจอเตี้ย
    =============================== */
 @media (max-height: 700px){
   .video-wrapper video{
-    max-height: 45vh;
+    max-height: 35vh;
   }
 }
 
 
 /* ===============================
-   MODAL VIDEO
+   MODAL VIDEO (จิ๋วตาม)
    =============================== */
 .modal video{
   width: 100%;
-  max-height: 65vh;   /* ลดจากเดิม 80vh */
+  max-height: 45vh;
   object-fit: contain;
-  border-radius: 16px;
+  border-radius: 12px;
 }
